@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.9.6 on darwin)" generated="2025-01-26T22:47:13.267834" rpa="false" schemaversion="5">
+<suite id="s1" name="Search Tests" source="/Users/tunchanokpunmeros/Desktop/Crowdfunding-Website-QA-robot-framework/tests/search_tests.robot">
+<test id="s1-t1" name="Search Test" line="8">
+<kw name="Open Browser To Explore Page" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-26T22:47:13.368104" level="INFO">Opening browser 'Chrome' to base url 'https://shark-wow.vercel.app/explore'.</msg>
+<arg>${BASE_URL}${EXPLORE_PATH}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-26T22:47:13.367954" elapsed="1.434362"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-26T22:47:14.803354" elapsed="0.327469"/>
+</kw>
+<status status="PASS" start="2025-01-26T22:47:13.367525" elapsed="1.763438"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-26T22:47:15.131913" level="INFO">Typing text 'Dragon' into text field 'xpath=//input[@placeholder="Explore projects"]'.</msg>
+<arg>xpath=//input[@placeholder="Explore projects"]</arg>
+<arg>${SEARCH_TERM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-26T22:47:15.131299" elapsed="0.112179"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-01-26T22:47:15.244263" level="INFO">Sending key(s) ('ENTER',) to xpath=//input[@placeholder="Explore projects"] element.</msg>
+<msg time="2025-01-26T22:47:15.531936" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2025-01-26T22:47:15.532061" level="INFO">Releasing special key ENTER.</msg>
+<arg>xpath=//input[@placeholder="Explore projects"]</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-01-26T22:47:15.243876" elapsed="0.297115"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-26T22:47:19.543211" level="INFO">Slept 4 seconds.</msg>
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-26T22:47:15.541259" elapsed="4.002498"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${SEARCH_TERM}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-26T22:47:19.545085" elapsed="0.019736"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-26T22:47:19.565200" elapsed="0.097016"/>
+</kw>
+<tag>smoke</tag>
+<status status="PASS" start="2025-01-26T22:47:13.367154" elapsed="6.295281"/>
+</test>
+<status status="PASS" start="2025-01-26T22:47:13.268483" elapsed="6.394280"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat name="Search Tests" id="s1" pass="1" fail="0" skip="0">Search Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

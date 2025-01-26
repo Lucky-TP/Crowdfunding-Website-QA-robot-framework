@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.9.6 on darwin)" generated="2025-01-26T22:48:46.124981" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/Users/tunchanokpunmeros/Desktop/Crowdfunding-Website-QA-robot-framework/tests">
+<suite id="s1-s1" name="Login Tests" source="/Users/tunchanokpunmeros/Desktop/Crowdfunding-Website-QA-robot-framework/tests/login_tests.robot">
+<test id="s1-s1-t1" name="Valid Login Test" line="5">
+<kw name="Open Browser To Login Page" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-26T22:48:46.230532" level="INFO">Opening browser 'Chrome' to base url 'https://shark-wow.vercel.app/sign-in'.</msg>
+<arg>${BASE_URL}${SIGN_IN_PATH}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-26T22:48:46.230381" elapsed="1.738224"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-26T22:48:47.969246" elapsed="0.315443"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-01-26T22:48:48.287978" level="INFO">Page title is 'Shark'.</msg>
+<arg>Shark</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-01-26T22:48:48.284872" elapsed="0.003177"/>
+</kw>
+<status status="PASS" start="2025-01-26T22:48:46.229938" elapsed="2.058206"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-26T22:48:48.288734" level="INFO">Typing text 'test@example.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${VALID_EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-26T22:48:48.288346" elapsed="0.127452"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-26T22:48:48.416190" level="INFO">Typing text 'secure_password1234' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${VALID_PWD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-26T22:48:48.415988" elapsed="0.034470"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-26T22:48:48.450925" level="INFO">Clicking element 'xpath=//span[contains(text(), 'Sign in')]'.</msg>
+<arg>xpath=//span[contains(text(), 'Sign in')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-26T22:48:48.450702" elapsed="0.030104"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>About me</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-26T22:48:48.481004" elapsed="3.205295"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-26T22:48:51.686799" elapsed="0.094616"/>
+</kw>
+<tag>smoke</tag>
+<status status="PASS" start="2025-01-26T22:48:46.229555" elapsed="5.552096"/>
+</test>
+<test id="s1-s1-t2" name="Invalid Login Test" line="14">
+<kw name="Open Browser To Login Page" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-26T22:48:51.782970" level="INFO">Opening browser 'Chrome' to base url 'https://shark-wow.vercel.app/sign-in'.</msg>
+<arg>${BASE_URL}${SIGN_IN_PATH}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-26T22:48:51.782598" elapsed="1.577238"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-26T22:48:53.360643" elapsed="0.313483"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-01-26T22:48:53.676576" level="INFO">Page title is 'Shark'.</msg>
+<arg>Shark</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-01-26T22:48:53.674283" elapsed="0.002391"/>
+</kw>
+<status status="PASS" start="2025-01-26T22:48:51.782322" elapsed="1.894445"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-26T22:48:53.677170" level="INFO">Typing text 'invalid@example.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${INVALID_EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-26T22:48:53.676939" elapsed="0.107383"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-26T22:48:53.784724" level="INFO">Typing text 'wrong_password' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${INVALID_PWD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-26T22:48:53.784526" elapsed="0.039620"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-26T22:48:53.824540" level="INFO">Clicking element 'xpath=//span[contains(text(), 'Sign in')]'.</msg>
+<arg>xpath=//span[contains(text(), 'Sign in')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-26T22:48:53.824368" elapsed="0.036241"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Invalid email or password. Please try again.</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-26T22:48:53.860879" elapsed="0.855835"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-26T22:48:54.717031" elapsed="0.083669"/>
+</kw>
+<tag>regression</tag>
+<status status="PASS" start="2025-01-26T22:48:51.781915" elapsed="3.019129"/>
+</test>
+<status status="PASS" start="2025-01-26T22:48:46.137280" elapsed="8.664361"/>
+</suite>
+<suite id="s1-s2" name="Search Tests" source="/Users/tunchanokpunmeros/Desktop/Crowdfunding-Website-QA-robot-framework/tests/search_tests.robot">
+<test id="s1-s2-t1" name="Search Test" line="8">
+<kw name="Open Browser To Explore Page" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-26T22:48:54.805879" level="INFO">Opening browser 'Chrome' to base url 'https://shark-wow.vercel.app/explore'.</msg>
+<arg>${BASE_URL}${EXPLORE_PATH}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-26T22:48:54.805673" elapsed="1.207735"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-26T22:48:56.013709" elapsed="0.325957"/>
+</kw>
+<status status="PASS" start="2025-01-26T22:48:54.805436" elapsed="1.534375"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-26T22:48:56.340659" level="INFO">Typing text 'Dragon' into text field 'xpath=//input[@placeholder="Explore projects"]'.</msg>
+<arg>xpath=//input[@placeholder="Explore projects"]</arg>
+<arg>${SEARCH_TERM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-26T22:48:56.340166" elapsed="0.117240"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-01-26T22:48:56.458263" level="INFO">Sending key(s) ('ENTER',) to xpath=//input[@placeholder="Explore projects"] element.</msg>
+<msg time="2025-01-26T22:48:56.730571" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2025-01-26T22:48:56.730657" level="INFO">Releasing special key ENTER.</msg>
+<arg>xpath=//input[@placeholder="Explore projects"]</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-01-26T22:48:56.457806" elapsed="0.278492"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-26T22:49:00.738228" level="INFO">Slept 4 seconds.</msg>
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-26T22:48:56.736653" elapsed="4.002115"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${SEARCH_TERM}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-26T22:49:00.741075" elapsed="0.018872"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-26T22:49:00.760305" elapsed="0.091781"/>
+</kw>
+<tag>smoke</tag>
+<status status="PASS" start="2025-01-26T22:48:54.804989" elapsed="6.047359"/>
+</test>
+<status status="PASS" start="2025-01-26T22:48:54.802030" elapsed="6.050675"/>
+</suite>
+<status status="PASS" start="2025-01-26T22:48:46.125756" elapsed="14.727383"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">regression</stat>
+<stat pass="2" fail="0" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="3" fail="0" skip="0">Tests</stat>
+<stat name="Login Tests" id="s1-s1" pass="2" fail="0" skip="0">Tests.Login Tests</stat>
+<stat name="Search Tests" id="s1-s2" pass="1" fail="0" skip="0">Tests.Search Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

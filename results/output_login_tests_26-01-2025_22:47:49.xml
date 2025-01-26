@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.9.6 on darwin)" generated="2025-01-26T22:47:49.367561" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Tests" source="/Users/tunchanokpunmeros/Desktop/Crowdfunding-Website-QA-robot-framework/tests/login_tests.robot">
+<test id="s1-t1" name="Valid Login Test" line="5">
+<kw name="Open Browser To Login Page" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-26T22:47:49.468238" level="INFO">Opening browser 'Chrome' to base url 'https://shark-wow.vercel.app/sign-in'.</msg>
+<arg>${BASE_URL}${SIGN_IN_PATH}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-26T22:47:49.468090" elapsed="1.134666"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-26T22:47:50.603212" elapsed="0.314511"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-01-26T22:47:50.920230" level="INFO">Page title is 'Shark'.</msg>
+<arg>Shark</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-01-26T22:47:50.917902" elapsed="0.002393"/>
+</kw>
+<status status="PASS" start="2025-01-26T22:47:49.467661" elapsed="1.452742"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-26T22:47:50.921069" level="INFO">Typing text 'test@example.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${VALID_EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-26T22:47:50.920618" elapsed="0.125397"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-26T22:47:51.046412" level="INFO">Typing text 'secure_password1234' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${VALID_PWD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-26T22:47:51.046218" elapsed="0.036125"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-26T22:47:51.082783" level="INFO">Clicking element 'xpath=//span[contains(text(), 'Sign in')]'.</msg>
+<arg>xpath=//span[contains(text(), 'Sign in')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-26T22:47:51.082549" elapsed="0.032481"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>About me</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-26T22:47:51.115278" elapsed="6.368782"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-26T22:47:57.484335" elapsed="0.095258"/>
+</kw>
+<tag>smoke</tag>
+<status status="PASS" start="2025-01-26T22:47:49.467276" elapsed="8.112639"/>
+</test>
+<test id="s1-t2" name="Invalid Login Test" line="14">
+<kw name="Open Browser To Login Page" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-26T22:47:57.581292" level="INFO">Opening browser 'Chrome' to base url 'https://shark-wow.vercel.app/sign-in'.</msg>
+<arg>${BASE_URL}${SIGN_IN_PATH}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-26T22:47:57.580998" elapsed="0.967402"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-26T22:47:58.548883" elapsed="0.319114"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-01-26T22:47:58.872097" level="INFO">Page title is 'Shark'.</msg>
+<arg>Shark</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-01-26T22:47:58.868306" elapsed="0.003883"/>
+</kw>
+<status status="PASS" start="2025-01-26T22:47:57.580740" elapsed="1.291597"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-26T22:47:58.872845" level="INFO">Typing text 'invalid@example.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${INVALID_EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-26T22:47:58.872575" elapsed="0.107596"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-26T22:47:58.980618" level="INFO">Typing text 'wrong_password' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${INVALID_PWD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-26T22:47:58.980380" elapsed="0.037602"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-26T22:47:59.018350" level="INFO">Clicking element 'xpath=//span[contains(text(), 'Sign in')]'.</msg>
+<arg>xpath=//span[contains(text(), 'Sign in')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-26T22:47:59.018189" elapsed="0.029768"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Invalid email or password. Please try again.</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-26T22:47:59.048240" elapsed="1.078515"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-26T22:48:00.127227" elapsed="0.093686"/>
+</kw>
+<tag>regression</tag>
+<status status="PASS" start="2025-01-26T22:47:57.580226" elapsed="2.640997"/>
+</test>
+<status status="PASS" start="2025-01-26T22:47:49.368204" elapsed="10.853494"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">regression</stat>
+<stat pass="1" fail="0" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat name="Login Tests" id="s1" pass="2" fail="0" skip="0">Login Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
