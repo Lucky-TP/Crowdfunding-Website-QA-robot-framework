@@ -6,10 +6,6 @@ Homepage Test
     [Tags]    smoke
     Open Browser To Homepage
     Wait Until Page Contains    Welcome to Shark Funding
-    Close Browser
-Hero Section Test
-    [Tags]    smoke
-    Open Browser To Homepage
     Click Link    xpath=//a[contains(., "Explore Now")]
     Wait Until Location Is    ${BASE_URL}${EXPLORE_PATH}
     Close Browser
@@ -43,7 +39,7 @@ Verify View Project Navigation
     END
     Close Browser
 
-Verify Navigation Bar
+Verify Navigation Bar and Footer
     [Tags]    regression
     Open Browser To Homepage
     Maximize Browser Window
@@ -51,11 +47,6 @@ Verify Navigation Bar
     Element Should Contain    xpath=//nav    EXPLORE
     Element Should Contain    xpath=//nav    CREATE PROJECT
     Element Should Contain    xpath=//nav    SIGN IN / SIGN UP
-    Close Browser
-Verify Footer Content
-    [Tags]    regression
-    Open Browser To Homepage
-    Maximize Browser Window
     Wait Until Element Is Visible    xpath=//footer
     Element Should Contain    xpath=//footer    © 2024 Shark Funding. All rights reserved.
     Close Browser
