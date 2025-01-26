@@ -3,6 +3,9 @@ Library    SeleniumLibrary
 Resource    variables.robot
 
 *** Keywords ***
+Open Browser To Homepage
+    Open Browser    ${BASE_URL}    ${BROWSER}
+    Maximize Browser Window
 Open Browser To Login Page
     Open Browser    ${BASE_URL}${SIGN_IN_PATH}    ${BROWSER}
     Maximize Browser Window

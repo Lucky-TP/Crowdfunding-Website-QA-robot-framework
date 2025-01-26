@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.9.6 on darwin)" generated="2025-01-27T00:11:14.588263" rpa="false" schemaversion="5">
+<suite id="s1" name="Homepage Tests" source="/Users/tunchanokpunmeros/Desktop/Crowdfunding-Website-QA-robot-framework/tests/homepage_tests.robot">
+<test id="s1-t1" name="Homepage Test" line="5">
+<kw name="Open Browser To Homepage" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-27T00:11:14.696429" level="INFO">Opening browser 'Chrome' to base url 'https://shark-wow.vercel.app'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-27T00:11:14.696267" elapsed="1.198123"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-27T00:11:15.896148" elapsed="0.320482"/>
+</kw>
+<status status="PASS" start="2025-01-27T00:11:14.695738" elapsed="1.521019"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Welcome to Shark Funding</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-27T00:11:16.216980" elapsed="0.008695"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-27T00:11:16.225992" elapsed="0.074782"/>
+</kw>
+<tag>smoke</tag>
+<status status="PASS" start="2025-01-27T00:11:14.695341" elapsed="1.605856"/>
+</test>
+<test id="s1-t2" name="Hero Section Test" line="10">
+<kw name="Open Browser To Homepage" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-27T00:11:16.302380" level="INFO">Opening browser 'Chrome' to base url 'https://shark-wow.vercel.app'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-27T00:11:16.302184" elapsed="0.997934"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-27T00:11:17.300454" elapsed="0.325987"/>
+</kw>
+<status status="PASS" start="2025-01-27T00:11:16.301921" elapsed="1.324680"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-01-27T00:11:17.627358" level="INFO">Clicking link 'xpath=//a[contains(., "Explore Now")]'.</msg>
+<arg>xpath=//a[contains(., "Explore Now")]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-27T00:11:17.626883" elapsed="0.040407"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${BASE_URL}${EXPLORE_PATH}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-01-27T00:11:17.667715" elapsed="0.023942"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-27T00:11:17.691886" elapsed="0.078582"/>
+</kw>
+<tag>smoke</tag>
+<status status="PASS" start="2025-01-27T00:11:16.301482" elapsed="1.469231"/>
+</test>
+<test id="s1-t3" name="Verify Project Card Details" line="17">
+<kw name="Open Browser To Homepage" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-27T00:11:17.771698" level="INFO">Opening browser 'Chrome' to base url 'https://shark-wow.vercel.app'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-27T00:11:17.771495" elapsed="0.962448"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-27T00:11:18.734266" elapsed="0.322242"/>
+</kw>
+<status status="PASS" start="2025-01-27T00:11:17.771284" elapsed="1.285424"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-27T00:11:19.057119" elapsed="0.001433"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-01-27T00:11:19.065063" level="INFO">${project_cards} = []</msg>
+<var>${project_cards}</var>
+<arg>xpath=//div[contains(@class, 'project-card')]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-01-27T00:11:19.058848" elapsed="0.006262"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<arg>${card}</arg>
+<arg>Title</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" start="2025-01-27T00:11:19.065643" elapsed="0.000034"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<arg>${card}</arg>
+<arg>$</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" start="2025-01-27T00:11:19.065753" elapsed="0.000018"/>
+</kw>
+<var name="${card}"/>
+<status status="NOT RUN" start="2025-01-27T00:11:19.065512" elapsed="0.000288"/>
+</iter>
+<var>${card}</var>
+<value>@{project_cards}</value>
+<status status="NOT RUN" start="2025-01-27T00:11:19.065300" elapsed="0.000526"/>
+</for>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-27T00:11:19.065942" elapsed="0.073909"/>
+</kw>
+<tag>smoke</tag>
+<status status="PASS" start="2025-01-27T00:11:17.770920" elapsed="1.369117"/>
+</test>
+<test id="s1-t4" name="Verify View Project Navigation" line="28">
+<kw name="Open Browser To Homepage" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-27T00:11:19.141053" level="INFO">Opening browser 'Chrome' to base url 'https://shark-wow.vercel.app'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-27T00:11:19.140802" elapsed="1.017903"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-27T00:11:20.159013" elapsed="0.314159"/>
+</kw>
+<status status="PASS" start="2025-01-27T00:11:19.140527" elapsed="1.332769"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-27T00:11:20.473655" elapsed="0.001249"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2025-01-27T00:11:20.475308" level="INFO">Length is 86.</msg>
+<msg time="2025-01-27T00:11:20.475401" level="INFO">${num_buttons} = 86</msg>
+<var>${num_buttons}</var>
+<arg>xpath=//button[contains(@class, 'bg-orange-600') and contains(text(), 'View Project')]</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2025-01-27T00:11:20.475114" elapsed="0.000321"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-27T00:11:20.475678" level="INFO">Found 86 "View Project" buttons to verify.</msg>
+<arg>Found ${num_buttons} "View Project" buttons to verify.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-27T00:11:20.475564" elapsed="0.000147"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-01-27T00:11:20.482134" level="INFO">${button} = &lt;selenium.webdriver.remote.webelement.WebElement (session="fc97df565ffae182c4468ce32fd50e06", element="f.54CD9E44FAF1BD1D391C23024F705B6B.d.CF959E84473F0A4062EA50793B68F3E4.e.17")&gt;</msg>
+<var>${button}</var>
+<arg>xpath=(//button[contains(@class, 'bg-orange-600') and contains(text(), 'View Project')])[${index}+1]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-01-27T00:11:20.476031" elapsed="0.006145"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-27T00:11:20.482529" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="fc97df565ffae182c4468ce32fd50e06", element="f.54CD9E44FAF1BD1D391C23024F705B6B.d.CF959E84473F0A4062EA50793B68F3E4.e.17")&gt;'.</msg>
+<arg>${button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-27T00:11:20.482330" elapsed="0.028705"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//h1[contains(@class, 'text-2xl font-bold')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-27T00:11:20.511247" elapsed="1.463346"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-27T00:11:21.984804" level="INFO">${title} = Digital Transformation</msg>
+<var>${title}</var>
+<arg>xpath=//h1[contains(@class, 'text-2xl font-bold')]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-27T00:11:21.974892" elapsed="0.009947"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-27T00:11:21.985122" level="INFO">Navigated to project with title: Digital Transformation</msg>
+<arg>Navigated to project with title: ${title}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-27T00:11:21.984969" elapsed="0.000190"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-01-27T00:11:21.985243" elapsed="0.011321"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-27T00:11:22.997699" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-27T00:11:21.997143" elapsed="1.000649"/>
+</kw>
+<var name="${index}">0</var>
+<status status="PASS" start="2025-01-27T00:11:20.475953" elapsed="2.521893"/>
+</iter>
+<iter>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-01-27T00:11:23.003589" level="INFO">${button} = &lt;selenium.webdriver.remote.webelement.WebElement (session="fc97df565ffae182c4468ce32fd50e06", element="f.54CD9E44FAF1BD1D391C23024F705B6B.d.CF959E84473F0A4062EA50793B68F3E4.e.44")&gt;</msg>
+<var>${button}</var>
+<arg>xpath=(//button[contains(@class, 'bg-orange-600') and contains(text(), 'View Project')])[${index}+1]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-01-27T00:11:22.998089" elapsed="0.005538"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-27T00:11:23.003947" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="fc97df565ffae182c4468ce32fd50e06", element="f.54CD9E44FAF1BD1D391C23024F705B6B.d.CF959E84473F0A4062EA50793B68F3E4.e.44")&gt;'.</msg>
+<arg>${button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-27T00:11:23.003785" elapsed="0.020717"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//h1[contains(@class, 'text-2xl font-bold')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-27T00:11:23.024691" elapsed="1.457314"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-27T00:11:24.489777" level="INFO">${title} = SolarCards</msg>
+<var>${title}</var>
+<arg>xpath=//h1[contains(@class, 'text-2xl font-bold')]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-27T00:11:24.482204" elapsed="0.007626"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-27T00:11:24.490158" level="INFO">Navigated to project with title: SolarCards</msg>
+<arg>Navigated to project with title: ${title}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-27T00:11:24.489999" elapsed="0.000193"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-01-27T00:11:24.490274" elapsed="0.009054"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-27T00:11:25.501545" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-27T00:11:24.499554" elapsed="1.002135"/>
+</kw>
+<var name="${index}">1</var>
+<status status="PASS" start="2025-01-27T00:11:22.997977" elapsed="2.503781"/>
+</iter>
+<iter>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-01-27T00:11:25.507687" level="INFO">${button} = &lt;selenium.webdriver.remote.webelement.WebElement (session="fc97df565ffae182c4468ce32fd50e06", element="f.54CD9E44FAF1BD1D391C23024F705B6B.d.CF959E84473F0A4062EA50793B68F3E4.e.68")&gt;</msg>
+<var>${button}</var>
+<arg>xpath=(//button[contains(@class, 'bg-orange-600') and contains(text(), 'View Project')])[${index}+1]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-01-27T00:11:25.501999" elapsed="0.005724"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-27T00:11:25.508017" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="fc97df565ffae182c4468ce32fd50e06", element="f.54CD9E44FAF1BD1D391C23024F705B6B.d.CF959E84473F0A4062EA50793B68F3E4.e.68")&gt;'.</msg>
+<arg>${button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-27T00:11:25.507857" elapsed="0.020619"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//h1[contains(@class, 'text-2xl font-bold')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-27T00:11:25.528639" elapsed="1.455335"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-27T00:11:26.991384" level="INFO">${title} = Bears United - Global Dating Network for the Bears Community</msg>
+<var>${title}</var>
+<arg>xpath=//h1[contains(@class, 'text-2xl font-bold')]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-27T00:11:26.984134" elapsed="0.007289"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-27T00:11:26.991838" level="INFO">Navigated to project with title: Bears United - Global Dating Network for the Bears Community</msg>
+<arg>Navigated to project with title: ${title}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-27T00:11:26.991562" elapsed="0.000328"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-01-27T00:11:26.992055" elapsed="0.021446"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-27T00:11:28.014684" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-27T00:11:27.013840" elapsed="1.000935"/>
+</kw>
+<var name="${index}">2</var>
+<status status="PASS" start="2025-01-27T00:11:25.501881" elapsed="2.512949"/>
+</iter>
+<iter>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-01-27T00:11:28.020695" level="INFO">${button} = &lt;selenium.webdriver.remote.webelement.WebElement (session="fc97df565ffae182c4468ce32fd50e06", element="f.54CD9E44FAF1BD1D391C23024F705B6B.d.CF959E84473F0A4062EA50793B68F3E4.e.98")&gt;</msg>
+<var>${button}</var>
+<arg>xpath=(//button[contains(@class, 'bg-orange-600') and contains(text(), 'View Project')])[${index}+1]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-01-27T00:11:28.015050" elapsed="0.005682"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-27T00:11:28.021005" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="fc97df565ffae182c4468ce32fd50e06", element="f.54CD9E44FAF1BD1D391C23024F705B6B.d.CF959E84473F0A4062EA50793B68F3E4.e.98")&gt;'.</msg>
+<arg>${button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-27T00:11:28.020857" elapsed="0.020551"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//h1[contains(@class, 'text-2xl font-bold')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-27T00:11:28.041594" elapsed="1.473193"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-27T00:11:29.527627" level="INFO">${title} = RepliTronics: Mini Boombox Project</msg>
+<var>${title}</var>
+<arg>xpath=//h1[contains(@class, 'text-2xl font-bold')]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-27T00:11:29.514992" elapsed="0.012671"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-27T00:11:29.527960" level="INFO">Navigated to project with title: RepliTronics: Mini Boombox Project</msg>
+<arg>Navigated to project with title: ${title}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-27T00:11:29.527821" elapsed="0.000175"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-01-27T00:11:29.528071" elapsed="0.006215"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-27T00:11:30.535380" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-27T00:11:29.534436" elapsed="1.001040"/>
+</kw>
+<var name="${index}">3</var>
+<status status="PASS" start="2025-01-27T00:11:28.014950" elapsed="2.520581"/>
+</iter>
+<var>${index}</var>
+<value>4</value>
+<status status="PASS" start="2025-01-27T00:11:20.475785" elapsed="10.059786"/>
+</for>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-27T00:11:30.535734" elapsed="0.094315"/>
+</kw>
+<tag>smoke</tag>
+<status status="PASS" start="2025-01-27T00:11:19.140217" elapsed="11.490005"/>
+</test>
+<test id="s1-t5" name="Verify Navigation Bar" line="46">
+<kw name="Open Browser To Homepage" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-27T00:11:30.630997" level="INFO">Opening browser 'Chrome' to base url 'https://shark-wow.vercel.app'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-27T00:11:30.630852" elapsed="1.312530"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-27T00:11:31.943702" elapsed="0.312574"/>
+</kw>
+<status status="PASS" start="2025-01-27T00:11:30.630664" elapsed="1.625905"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-27T00:11:32.257461" elapsed="0.002297"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//nav</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-27T00:11:32.259966" elapsed="0.012486"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-01-27T00:11:32.284338" level="INFO">Element 'xpath=//nav' contains text 'EXPLORE'.</msg>
+<arg>xpath=//nav</arg>
+<arg>EXPLORE</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-01-27T00:11:32.272696" elapsed="0.011733"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-01-27T00:11:32.293482" level="INFO">Element 'xpath=//nav' contains text 'CREATE PROJECT'.</msg>
+<arg>xpath=//nav</arg>
+<arg>CREATE PROJECT</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-01-27T00:11:32.284630" elapsed="0.008928"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-01-27T00:11:32.301718" level="INFO">Element 'xpath=//nav' contains text 'SIGN IN / SIGN UP'.</msg>
+<arg>xpath=//nav</arg>
+<arg>SIGN IN / SIGN UP</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-01-27T00:11:32.293738" elapsed="0.008056"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-27T00:11:32.301976" elapsed="0.079878"/>
+</kw>
+<tag>regression</tag>
+<status status="PASS" start="2025-01-27T00:11:30.630388" elapsed="1.751690"/>
+</test>
+<test id="s1-t6" name="Verify Footer Content" line="55">
+<kw name="Open Browser To Homepage" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-27T00:11:32.383016" level="INFO">Opening browser 'Chrome' to base url 'https://shark-wow.vercel.app'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-27T00:11:32.382838" elapsed="1.053639"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-27T00:11:33.436811" elapsed="0.316281"/>
+</kw>
+<status status="PASS" start="2025-01-27T00:11:32.382626" elapsed="1.370600"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-27T00:11:33.753409" elapsed="0.001288"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//footer</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-27T00:11:33.754978" elapsed="0.014053"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-01-27T00:11:33.779301" level="INFO">Element 'xpath=//footer' contains text '© 2024 Shark Funding. All rights reserved.'.</msg>
+<arg>xpath=//footer</arg>
+<arg>© 2024 Shark Funding. All rights reserved.</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-01-27T00:11:33.769265" elapsed="0.010125"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-27T00:11:33.779569" elapsed="0.073484"/>
+</kw>
+<tag>regression</tag>
+<status status="PASS" start="2025-01-27T00:11:32.382278" elapsed="1.470987"/>
+</test>
+<status status="PASS" start="2025-01-27T00:11:14.589010" elapsed="19.264644"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">regression</stat>
+<stat pass="4" fail="0" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat name="Homepage Tests" id="s1" pass="6" fail="0" skip="0">Homepage Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
