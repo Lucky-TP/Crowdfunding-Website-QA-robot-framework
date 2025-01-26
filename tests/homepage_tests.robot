@@ -35,7 +35,7 @@ Verify View Project Navigation
         Log    Navigated to project with title: ${title}
         # Capture Page Screenshot
         Go Back
-        Sleep    1s
+        # Sleep    1s
     END
     Close Browser
 
