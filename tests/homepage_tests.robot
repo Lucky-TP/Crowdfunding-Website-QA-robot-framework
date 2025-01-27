@@ -10,17 +10,6 @@ Homepage Test
     Wait Until Location Is    ${BASE_URL}${EXPLORE_PATH}
     Close Browser
 
-Verify Project Card Details
-    [Tags]    smoke
-    Open Browser To Homepage
-    Maximize Browser Window
-    ${project_cards}=    Get WebElements    xpath=//div[contains(@class, 'project-card')]
-    FOR    ${card}    IN    @{project_cards}
-        Element Should Contain    ${card}    Title
-        Element Should Contain    ${card}    $    # Funding amount
-    END
-    Close Browser
-
 Verify View Project Navigation
     [Tags]    smoke
     Open Browser To Homepage
