@@ -15,7 +15,6 @@ Search Test
     Wait Until Page Contains    ${VALID_SEARCH_QUERY}
     Close Browser
 
-*** Test Cases ***
 Search Test API With Valid Query
     [Tags]    API
     Create Session    search_session    ${API_URL}
